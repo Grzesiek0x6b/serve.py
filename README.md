@@ -23,6 +23,15 @@ Options:
   -p PORT, --port=PORT  Port on which server will listen [default: 8080].
 ```
 
+### Usage example
+To host your ```.bashrc``` and ```.profile``` files on your public ip and port 80, run
+```
+$ serve.py -a public -p 80 mybash=$HOME/.bashrc myprof=$HOME/.profile
+```
+You will see message similar to
+```Added http://YOUR_IP:80/mybash -> /home/YOUR_USER/.bashrc```
+so visit http://YOUR_IP:80/mybash on different machine to get your .bashrc file.
+
 ## Requirements
 * Python (2.7 or 3.x)
 * CherryPy
